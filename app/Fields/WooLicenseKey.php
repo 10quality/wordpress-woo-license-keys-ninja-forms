@@ -54,6 +54,18 @@ class WooLicenseKey extends NF_Fields_Textbox
      */
     protected $_templates = 'woolicensekey';
     /**
+     * Excluded field settings.
+     * @since 1.0.0
+     * @var string
+     */
+    protected $_settings_exclude = [
+        'input_limit_set',
+        'disable_input',
+        'disable_browser_autocomplete',
+        'default',
+        'mask',
+    ];
+    /**
      * Constructor.
      * @since 1.0.0
      */

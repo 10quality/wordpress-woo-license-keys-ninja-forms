@@ -80,9 +80,12 @@ class NinjaFormsController extends Controller
                                 'ajax_action'   => is_user_logged_in() ? 'wclk_ninja_form' : false,
                                 'min_length'    => null,
                                 'lang'          => [
-                                                    'placeholder'       => is_user_logged_in()
-                                                        ? __( 'Type to search for a license key.', 'woo-license-keys-ninja-forms' )
-                                                        : __( 'Type your license key.', 'woo-license-keys-ninja-forms' ),
+                                                    'placeholder'       => empty( $settings['placeholder'] )
+                                                        ? ( is_user_logged_in()
+                                                            ? __( 'Type to search for a license key.', 'woo-license-keys-ninja-forms' )
+                                                            : __( 'Type your license key.', 'woo-license-keys-ninja-forms' )
+                                                        )
+                                                        : $settings['placeholder'],
                                                     'inputTooShort'     => __( 'Type more characters', 'woo-license-keys-ninja-forms' ),
                                                     'inputTooLong'      => __( 'Type less characters', 'woo-license-keys-ninja-forms' ),
                                                     'errorLoading'      => __( 'Error loading license keys', 'woo-license-keys-ninja-forms' ),
