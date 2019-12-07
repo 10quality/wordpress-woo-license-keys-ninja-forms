@@ -17,6 +17,7 @@ return [
         'lang'          => __DIR__ . '/../../assets/lang/',
         'log'           => WP_CONTENT_DIR . '/wpmvc/log',
         'templates'     => __DIR__ . '/../../assets/templates/',
+        'theme_path'    => '/wclkninjaforms/',
 
     ],
 
@@ -62,7 +63,7 @@ return [
         // Default path for language files
         'path'          => __DIR__ . '/../../assets/lang/',
         // Text domain
-        'textdomain'    => 'woo-license-keys-ninja-forms',
+        'textdomain'    => 'woo-license-keys-nf',
         // Unload loaded locale files before localization
         'unload'        => false,
         // Flag that inidcates if this is a Wordpress.org plugin/theme

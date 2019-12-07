@@ -1,5 +1,5 @@
 === Plugin Name ===
-Ninja Forms integration with License Keys for WooCommerce
+Integration - Ninja Forms and License Keys for WooCommerce
 Contributors: 10quality
 Tags: woocommerce, license keys, ninja forms
 Requires at least: 3.2

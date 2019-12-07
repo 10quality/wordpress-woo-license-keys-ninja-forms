@@ -11,7 +11,7 @@ use WCLKNinjaForms\MergeTags\WooLicenseKeyDetails;
  *
  * @author 10Quality <info@10quality.com>
  * @license GPLv3
- * @package woo-license-keys-ninja-forms
+ * @package woo-license-keys-nf
  * @version 1.0.0
  */
 class NinjaFormsController extends Controller
@@ -93,17 +93,17 @@ class NinjaFormsController extends Controller
                                 'lang'          => [
                                                     'placeholder'       => empty( $settings['placeholder'] )
                                                         ? ( is_user_logged_in()
-                                                            ? __( 'Type to search for a license key.', 'woo-license-keys-ninja-forms' )
-                                                            : __( 'Type your license key.', 'woo-license-keys-ninja-forms' )
+                                                            ? __( 'Type to search for a license key.', 'woo-license-keys-nf' )
+                                                            : __( 'Type your license key.', 'woo-license-keys-nf' )
                                                         )
                                                         : $settings['placeholder'],
-                                                    'inputTooShort'     => __( 'Type more characters', 'woo-license-keys-ninja-forms' ),
-                                                    'inputTooLong'      => __( 'Type less characters', 'woo-license-keys-ninja-forms' ),
-                                                    'errorLoading'      => __( 'Error loading license keys', 'woo-license-keys-ninja-forms' ),
-                                                    'loadingMore'       => __( 'Loading more license keys', 'woo-license-keys-ninja-forms' ),
-                                                    'noResults'         => __( 'No license keys found', 'woo-license-keys-ninja-forms' ),
-                                                    'searching'         => __( 'Searching...', 'woo-license-keys-ninja-forms' ),
-                                                    'maximumSelected'   => __( 'Error loading license keys', 'woo-license-keys-ninja-forms' ),
+                                                    'inputTooShort'     => __( 'Type more characters', 'woo-license-keys-nf' ),
+                                                    'inputTooLong'      => __( 'Type less characters', 'woo-license-keys-nf' ),
+                                                    'errorLoading'      => __( 'Error loading license keys', 'woo-license-keys-nf' ),
+                                                    'loadingMore'       => __( 'Loading more license keys', 'woo-license-keys-nf' ),
+                                                    'noResults'         => __( 'No license keys found', 'woo-license-keys-nf' ),
+                                                    'searching'         => __( 'Searching...', 'woo-license-keys-nf' ),
+                                                    'maximumSelected'   => __( 'Error loading license keys', 'woo-license-keys-nf' ),
                                                 ],
                             ] ) ]
                         ),

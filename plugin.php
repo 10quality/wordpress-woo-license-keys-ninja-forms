@@ -1,7 +1,7 @@
 <?php
 /*
-Plugin Name: Ninja Forms (License Keys)
-Description: License Keys for WooCommerce integration with Ninja Forms.
+Plugin Name: Integration - Ninja Forms and License Keys for WooCommerce
+Description: Ninja Forms integration with License Keys for WooCommerce.
 Version: 1.0.0
 Author: 10 Quality
 Author URI: https://www.10quality.com/

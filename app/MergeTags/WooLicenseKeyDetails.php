@@ -10,7 +10,7 @@ use WCLKNinjaForms\Fields\WooLicenseKey;
  *
  * @author 10Quality <info@10quality.com>
  * @license GPLv3
- * @package woo-license-keys-ninja-forms
+ * @package woo-license-keys-nf
  * @version 1.0.0
  */
 final class WooLicenseKeyDetails extends NF_Abstracts_MergeTags
@@ -33,12 +33,12 @@ final class WooLicenseKeyDetails extends NF_Abstracts_MergeTags
      */
     public function __construct()
     {
-        $this->title = __( 'License Key', 'woo-license-keys-ninja-forms' );
+        $this->title = __( 'License Key', 'woo-license-keys-nf' );
         $this->merge_tags = [
             'woolicensekey_details'   => [
                     'id'        => $this->id,
                     'tag'       => '{licensekey:details}',
-                    'label'     => __( 'Details', 'woo-license-keys-ninja-forms' ),
+                    'label'     => __( 'Details', 'woo-license-keys-nf' ),
                     'callback'  => [&$this, 'details_render'],
                 ],
         ];

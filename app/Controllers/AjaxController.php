@@ -13,7 +13,7 @@ use LicenseKeys\Models\LicenseKey;
  *
  * @author 10Quality <info@10quality.com>
  * @license GPLv3
- * @package woo-license-keys-ninja-forms
+ * @package woo-license-keys-nf
  * @version 1.0.0
  */
 class AjaxController extends Controller
@@ -62,7 +62,7 @@ class AjaxController extends Controller
                 }, $data );
                 $response->success = true;
             } catch ( Exception $e ) {
-                $response->message = __( 'Error while searching for a license key.', 'woo-license-keys-ninja-forms' );
+                $response->message = __( 'Error while searching for a license key.', 'woo-license-keys-nf' );
             }
         }
         $response->json();
