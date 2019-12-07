@@ -49,7 +49,7 @@ class AjaxController extends Controller
                     if ( $license_key ) {
                         $order = wc_get_order( $license_key->order_id );
                         if ( $order->get_user_id() == get_current_user_id() )
-                            $data[] = apply_filters( 'woocommerce_license_key', $license_key );
+                            $data[] = $license_key;
                     }
                 }
                 $view = $this->view;
@@ -57,7 +57,7 @@ class AjaxController extends Controller
                     $array = [];
                     $array['id'] = $license_key->the_key;
                     $array['text'] = $license_key->the_key;
-                    $array['html'] = $view->get( 'field-woolicensekey-select-option', ['license_key' => &$license_key] );
+                    $array['html'] = $view->get( 'fields.woolicensekey-select-option', ['license_key' => &$license_key] );
                     return apply_filters( 'wclk_nf_license_key', $array, $license_key );
                 }, $data );
                 $response->success = true;

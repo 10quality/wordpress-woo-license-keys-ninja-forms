@@ -4,6 +4,7 @@ namespace WCLKNinjaForms\Controllers;
 
 use WPMVC\MVC\Controller;
 use WCLKNinjaForms\Fields\WooLicenseKey;
+use WCLKNinjaForms\MergeTags\WooLicenseKeyDetails;
 
 /**
  * Ninja forms realted hooks.
@@ -26,6 +27,7 @@ class NinjaFormsController extends Controller
     {
         add_filter( 'ninja_forms_field_template_file_paths', [&$this, 'register_template_paths'] );
         add_filter( 'ninja_forms_register_fields', [&$this, 'register_fields'] );
+        add_filter( 'ninja_forms_loaded', [&$this, 'register_mergetags'] );
     }
     /**
      * Returns list of available template paths.
@@ -41,6 +43,16 @@ class NinjaFormsController extends Controller
     {
         $paths[] = wclk_ninja_forms()->config->get( 'paths.templates' );
         return $paths;
+    }
+    /**
+     * Registers merge tags.
+     * @since 1.0.0
+     * 
+     * @hook ninja_forms_loaded
+     */
+    public function register_mergetags()
+    {
+        Ninja_Forms()->merge_tags[WooLicenseKeyDetails::KEY] = new WooLicenseKeyDetails();
     }
     /**
      * Returns list of available fields.
@@ -72,7 +84,7 @@ class NinjaFormsController extends Controller
                     wp_add_inline_script(
                         'wclk-ninja-forms',
                         $this->view->get(
-                            'field-woolicensekey-inline-script',
+                            'fields.woolicensekey-inline-script',
                             ['data' => apply_filters( 'wclk_nf_woolicensekey_js_data', [
                                 'ajax'          => is_user_logged_in(),
                                 'ajax_url'      => is_user_logged_in() ? admin_url( 'admin-ajax.php' ) : false,
