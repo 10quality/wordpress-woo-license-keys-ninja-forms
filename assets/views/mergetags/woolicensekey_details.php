@@ -10,19 +10,19 @@
 if ( ! defined( 'ABSPATH' ) ) exit;
 ?>
 <?php if ( $license_key ) : ?>
-<table style="width:100%">
+<table cellpadding="5" cellspacing="0" style="width:100%">
     <tbody>
         <tr>
-            <th><?php _e( 'Code' ) ?></th>
-            <td><code><?php echo esc_attr( $license_key->the_key ) ?></code></td>
+            <th style="text-align: left; padding: 5px; background-color: #f7f7f7; width: 130px;"><?php _e( 'License Key Code', 'woo-license-keys' ) ?></th>
+            <td style="text-align: left; padding: 5px;"><code style="background-color: #FFEBEE;padding: 2px 5px;color: #B71C1C;"><?php echo esc_attr( $license_key->the_key ) ?></code></td>
         </tr>
         <tr>
-            <th><?php _e( 'Product', 'woocommerce' ) ?></th>
-            <td><?php echo esc_attr( $license_key->product->get_name() ) ?></td>
+            <th style="text-align: left; padding: 5px; background-color: #f7f7f7; width: 130px;"><?php _e( 'Product', 'woocommerce' ) ?></th>
+            <td style="text-align: left; padding: 5px;"><?php echo esc_attr( $license_key->product->get_name() ) ?></td>
         </tr>
         <tr>
-            <th><?php _e( 'Order', 'woocommerce' ) ?></th>
-            <td>#<?php echo esc_attr( $license_key->order_id ) ?></td>
+            <th style="text-align: left; padding: 5px; background-color: #f7f7f7; width: 130px;"><?php _e( 'Order', 'woocommerce' ) ?></th>
+            <td style="text-align: left; padding: 5px;">#<?php echo esc_attr( $license_key->order_id ) ?></td>
         </tr>
     </tbody>
 </table>

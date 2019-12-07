@@ -21,11 +21,15 @@ This plugin will integrate **License Keys** for **WooCommerce** with **Ninja For
 
 == Merge Tag ==
 
-If a license key field is part of the form. The merge tag **{licensekey:details}** can be used to further display license key information (customer code, product name, and order ID) to improve support notifications.
+If a license key field is part of the form. The merge tag **{licensekey:details}** can be used to further display license key information (customer code, product name, and order ID) to improve support notifications. ONLY WORKS on **Email** actions.
 
 == Customization ==
 
 This plugin has plenty of hooks for customization, all templates can also be edited inside a theme.
+
+== Open Source ==
+
+Open source repository is managed at [Github](https://github.com/10quality/wordpress-woo-license-keys-ninja-forms).
 
 == Installation ==
 
@@ -35,12 +39,10 @@ This plugin has plenty of hooks for customization, all templates can also be edi
 
 == Screenshots ==
 
-1. License Key tab and options when adding or editing a product. Note: Some features displayed are from the extension we offer.
-2. Customer's "License Keys" option at "My Account" page. *Note:* "Renew" and "Extend" buttons are only available with our [extended features](https://www.10quality.com/product/woocommerce-license-keys/).
-3. Customer's "License Key" page view at "My Account" page, with no activations.
-4. Customer's "License Key" page view at "My Account" page, with activations.
-5. License key list per order's item at Wordpress dashboard.
-6. License key product, with expiry, added in shopping cart.
+1. Form field *License Key* available at Ninja Form's editor builder.
+2. Form field *License Key* displayed in rendered form.
+3. Available *{licensekey:details}* merge tag iat Ninja Form's editor builder.
+4. Replaced *{licensekey:details}* merge tag in sent email.
 
 == Frequently Asked Questions ==
 
@@ -54,7 +56,7 @@ Once this plugin is activated, the "License Key" field will be available in the 
 
 = How to use the merge tag? =
 
-Once this plugin is activated, a "License Key" merge tag group will be available in the list of merge tags.
+Once this plugin is activated, a "License Key" merge tag group will be available in the list of merge tags. Only works on EMAIL based actions.
 
 = Documentation? =
 

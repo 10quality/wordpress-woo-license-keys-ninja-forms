@@ -28,24 +28,11 @@ final class WooLicenseKeyDetails extends NF_Abstracts_MergeTags
      */
     protected $id = self::KEY;
     /**
-     * Form ID.
-     * @since 1.0.0
-     * @var int
-     */
-    protected $form_id;
-    /**
-     * Submission.
-     * @since 1.0.0
-     * @var object
-     */
-    protected $submission;
-    /**
      * Constructor.
      * @since 1.0.0
      */
     public function __construct()
     {
-        parent::__construct();
         $this->title = __( 'License Key', 'woo-license-keys-ninja-forms' );
         $this->merge_tags = [
             'woolicensekey_details'   => [
@@ -55,52 +42,63 @@ final class WooLicenseKeyDetails extends NF_Abstracts_MergeTags
                     'callback'  => [&$this, 'details_render'],
                 ],
         ];
-        add_action( 'nf_get_form_id', [&$this, 'set_form_id' ], 15, 1 );
-        add_action( 'ninja_forms_save_sub', [&$this, 'set_submission' ] );
+        add_filter( 'ninja_forms_action_email_message', [&$this, 'replace_email_message'], 99, 3 );
     }
     /**
-     * Sets form id.
+     * Triggers email replacement.
      * @since 1.0.0
      * 
-     * @hook nf_get_form_id
+     * @hook ninja_forms_action_email_message
      * 
-     * @param int $form_id
+     * @param string $subject Message.
+     * @param array  $data
+     * @param array  $action_settings 
+     * 
+     * @return string
      */
-    public function set_form_id( $form_id )
+    public function replace_email_message( $subject, $data, $action_settings )
     {
-        vdump_and_die($form_id);
-        $this->form_id = $form_id;
-    }
-    /**
-     * Sets submission object.
-     * @since 1.0.0
-     * 
-     * @hook ninja_forms_save_sub
-     * 
-     * @param int $sub_id
-     */
-    public function set_submission( $sub_id )
-    {
-        $this->submission = Ninja_Forms()->form()->sub( $sub_id )->get();
+        preg_match_all("/{([^}]*)}/", $subject, $matches );
+
+        if( empty( $matches[0] ) ) return $subject;
+
+        foreach( $this->merge_tags as $merge_tag ){
+            if( ! isset( $merge_tag[ 'tag' ] ) || ! in_array( $merge_tag[ 'tag' ], $matches[0] ) ) continue;
+
+            if( ! isset($merge_tag[ 'callback' ])) continue;
+
+            if ( is_callable( array( $this, $merge_tag[ 'callback' ] ) ) ) {
+                $replace = $this->{$merge_tag[ 'callback' ]}( $data, $action_settings );
+            } elseif ( is_callable( $merge_tag[ 'callback' ] ) ) {
+                $replace = $merge_tag[ 'callback' ]( $data, $action_settings );
+            } else {
+                $replace = '';
+            }
+            
+            $subject = str_replace( $merge_tag[ 'tag' ], $replace, $subject );
+        }
+
+        return $subject;
     }
     /**
      * Returns tag value.
      * @since 1.0.0
      * 
+     * @param array $data
+     * @param array $action_settings
+     * 
      * @return string
      */
-    public function details_render()
+    public function details_render( $data = null, $action_settings = null )
     {
-        return;
-        foreach( Ninja_Forms()->form()->get_fields() as $field ) {
-            $settings = $field->get_settings();
-            if( $settings['type'] !== WooLicenseKey::KEY )
+        if ( $data === null || $action_settings === null )
+            return;
+        foreach ( $data['fields'] as $id => $field ) {
+            if( $field['type'] !== WooLicenseKey::KEY )
                 continue;
-            $code = apply_filters(
-                'ninja_forms_merge_tag_value_' . $settings['type'],
-                null,
-                $field
-            );
+            $code = $field['value'];
+            if ( empty( $code ) )
+                break;
             $license_key = wc_find_license_key( ['code' => $code] );
             if ( $license_key ) {
                 ob_start();
@@ -110,6 +108,6 @@ final class WooLicenseKeyDetails extends NF_Abstracts_MergeTags
                 break;
             }
         }
-        return;
+        return '';
     }
 }
