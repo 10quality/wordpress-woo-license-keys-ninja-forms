@@ -7,8 +7,7 @@ use NF_Fields_Textbox;
 /**
  * Ninja forms license key field.
  *
- * @author Cami M
- * @copyright 10Quality <info@10quality.com>
+ * @author 10Quality <info@10quality.com>
  * @license GPLv3
  * @package woo-license-keys-ninja-forms
  * @version 1.0.0
