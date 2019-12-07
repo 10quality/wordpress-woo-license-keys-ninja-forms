@@ -1,0 +1,23 @@
+#!/usr/bin/env php
+<?php
+
+if ( ! defined(  'WP_CONTENT_DIR' ) ) define( 'WP_CONTENT_DIR', __DIR__ );
+
+require_once __DIR__.'/vendor/autoload.php';
+
+/**
+ * Ayuco.
+ * Commands line scaffolding.
+ *
+ * @author Alejandro Mostajo <info@10quality.com>
+ * @package WPMVC
+ * @license MIT
+ * @version 1.0
+ */
+
+$ayuco = get_ayuco( __DIR__ );
+
+// BEGIN - Custom commands
+// END - Custom commands
+
+$ayuco->interpret();

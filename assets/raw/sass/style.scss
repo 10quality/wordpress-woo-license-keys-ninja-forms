@@ -1,0 +1,33 @@
+/*!
+ * Style woolicensekey.
+ *
+ * @author 10Quality <info@10quality.com>
+ * @license GPLv3
+ * @package woo-license-keys-ninja-forms
+ * @version 1.0.0
+ */
+$nf-field-height: 50px;
+$nf-field-inner-height: 48px;
+
+.woolicensekey-container
+{
+    .select2-container
+    {
+        width: 100% !important;
+
+        .select2-selection--single
+        {
+            height: $nf-field-height;
+        }
+
+        .select2-selection__rendered
+        {
+            line-height: $nf-field-height;
+        }
+
+        .select2-selection__arrow
+        {
+            height: $nf-field-inner-height;
+        }
+    }
+}//.woolicensekey-container

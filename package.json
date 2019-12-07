@@ -1,0 +1,8 @@
+{
+  "name": "woo-license-keys-ninja-forms",
+  "version": "1.0.0",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-wpmvc": "^1.2.*"
+  }
+}
