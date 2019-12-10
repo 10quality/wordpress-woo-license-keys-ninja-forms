@@ -36,4 +36,23 @@ class ConfigController extends Controller
             wclk_ninja_forms()->config->get( 'version' )
         );
     }
+    /**
+     * Returns plugin meta, adds documentation link.
+     * @since 1.0.0
+     * 
+     * @hook plugin_row_meta
+     * 
+     * @param array  $classes
+     * @param string $file
+     * 
+     * @return array
+     */
+    public function row_meta( $meta, $file )
+    {
+        if ( $file === wclk_ninja_forms()->config->get( 'localize.textdomain' ) . '/plugin.php' )
+            $meta['docs'] = '<a href="' . esc_url( 'https://www.10quality.com/docs/woocommerce-license-keys/integrations/ninja-forms/' )
+                . '" aria-label="' . esc_attr__( 'Documentation', 'woo-license-keys' ) . '" target="_blank">'
+                . esc_html__( 'Documentation', 'woo-license-keys' ) . '</a>';
+        return $meta;
+    }
 }

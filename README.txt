@@ -60,7 +60,7 @@ Once this plugin is activated, a "License Key" merge tag group will be available
 
 = Documentation? =
 
-For documentation [click here](https://www.10quality.com/docs/woocommerce-license-keys/).
+For documentation [click here](https://www.10quality.com/docs/woocommerce-license-keys/integrations/ninja-forms/).
 
 == Who do I thank for all of this? ==
 

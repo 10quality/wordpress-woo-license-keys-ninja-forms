@@ -21,7 +21,9 @@ class Main extends Bridge
      */
     public function init()
     {
+        // Config
         $this->add_action( 'wp_enqueue_scripts', 'ConfigController@register_assets' );
+        $this->add_filter( 'plugin_row_meta', 'ConfigController@row_meta', 10, 2 );
         $this->add_action( 'ninja_forms_enqueue_scripts', 'NinjaFormsController@enqueue_scripts' );
         // AJAX
         $this->add_action( 'wp_ajax_wclk_ninja_form', 'AjaxController@get' );
@@ -33,5 +35,6 @@ class Main extends Bridge
      */
     public function on_admin()
     {
+        // TODO
     }
 }
