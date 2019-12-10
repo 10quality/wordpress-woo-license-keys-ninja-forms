@@ -70,7 +70,11 @@ class NinjaFormsController extends Controller
         return $fields;
     }
     /**
+     * Enqueues front end assets.
+     * @since 1.0.0
      * @hook ninja_forms_enqueue_scripts
+     * 
+     * @param array $args Ninja form arguments.
      */
     public function enqueue_scripts( $args )
     {

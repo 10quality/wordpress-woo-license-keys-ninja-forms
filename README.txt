@@ -1,5 +1,5 @@
 === Plugin Name ===
-Integration - Ninja Forms and License Keys for WooCommerce
+License Keys (Forms integration)
 Contributors: 10quality
 Tags: woocommerce, license keys, ninja forms
 Requires at least: 3.2
@@ -33,7 +33,7 @@ Open source repository is managed at [Github](https://github.com/10quality/wordp
 
 == Installation ==
 
-1. Head to your Wordpress Admin Dashboard and click at the options **Plugins** then **Add new**.
+1. Head to your WordPress Admin Dashboard and click at the options **Plugins** then **Add new**.
 2. Search for this plugin usign the search input or if have downloaded the zip file, upload it manually.
 3. Activate the plugin through the 'Plugins' screen in WordPress.
 
@@ -48,7 +48,7 @@ Open source repository is managed at [Github](https://github.com/10quality/wordp
 
 = Dependencies? =
 
-Requires [License Keys for WooCommerce](https://wordpress.org/plugins/woo-license-keys/) and [Ninja Forms](https://wordpress.org/plugins/ninja-forms/) plugins to be installed and activated in your Wordpress setup.
+Requires [License Keys for WooCommerce](https://wordpress.org/plugins/woo-license-keys/) and [Ninja Forms](https://wordpress.org/plugins/ninja-forms/) plugins to be installed and activated in your WordPress setup.
 
 = How to use the field? =
 
@@ -66,3 +66,13 @@ For documentation [click here](https://www.10quality.com/docs/woocommerce-licens
 
 * [10Quality](https://www.10quality.com/)
 * [Wordpress MVC](https://www.wordpress-mvc.com/)
+
+Would you like to support and donate to help us maintain this plugin? [Click Here](https://www.10quality.com/donations/).
+
+== Changelog ==
+
+No changes yet.
+
+== Upgrade Notice ==
+
+No notices yet.
