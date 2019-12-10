@@ -18,6 +18,7 @@ $nf-field-inner-height: 48px;
         .select2-selection--single
         {
             height: $nf-field-height;
+            border-radius: 0;
         }
 
         .select2-selection__rendered
