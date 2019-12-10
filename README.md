@@ -1,57 +1,23 @@
-# Wordpress MVC
+# License Keys for WooCommerce - Ninja Forms integration plugin
 
-Wordpress MVC (WPMVC) framework.
+This plugin integrates License Keys for WooCommerce Wordpress plugin with Ninja Forms, allowing site owners to improve customer support forms.
 
-Visit the [oficial web site](https://www.wordpress-mvc.com/) for information and documentation.
+You can download the build plugin for free at [Wordpress.org](https://wordpress.org/plugins/woo-license-keys-nf/).
 
-## Special configurations
+## Support
 
-Make sure you have gone through all documentation and tutorials prior to making special configurations.
+You can report issues like on any other Github repository.
 
-### For public plugin projects to be hosted at Wordpress.org
+If you would like to support us and help us with a donation, [click here](https://www.10quality.com/donations/).
 
-WPMVC helps you develop and publish a public plugin.
+## Contribution
 
-Your plugin needs to be approved prior to publish, generate an approval zip with command `gulp build`. Once Wordpress.org has approven the plugin, follow the next steps to prepare your project for deployment:
+This plugin is powered by the [Wordpress MVC](https://www.wordpress-mvc.com/) framework. You will need to read the framework's documentation to understand how to code and contribute correctly.
 
-#### Step 1: Create wordpress-org.json
+### Coding guideline
 
-Create a new `.json` file at the root of your WPMVC project, name it `wordpress-org.json` and fill it with the following information:
-```json
-{
-    "root": "[plugin-name-path-given-by-wordpress.org]",
-    "path": "[plugin-name-path-given-by-wordpress.org]",
-    "cwd": "http://plugins.svn.wordpress.org/[plugin-name-path-given-by-wordpress.org]",
-    "username": "[wordpress.org-username]",
-    "password": "[wordpress.org-password]"
-}
-```
-*NOTE:* The username needs to have contributor permissions over the `plugin`.
+We use a mix between [Wordpress Conding Standards](https://codex.wordpress.org/WordPress_Coding_Standards) and [PSR-2](https://www.php-fig.org/psr/psr-2/).
 
-#### Step 2: Add your Wordpress.org assets
+## LICENSE
 
-Create and save your Wordpress.org assets within your project, at folder `/assets/wordpress/`.
-
-#### Step 3: Configure SVN
-
-Download and install [TortoiseSVN](https://tortoisesvn.net/) on you machine.
-
-Create the path `/svn/[plugin-name-path-given-by-wordpress.org]/` within your project.
-
-Use TortoiseSVN to checkout the plugin's Wordpress.org repository at the recently created folder `/svn/[plugin-name-path-given-by-wordpress.org]/`.
-
-#### Step 4: Build plugin with WPMVC
-
-Run command `gulp wordpress`.
-
-WPMVC will generate a clean build of the project (for production environment) inside the `/svn/[plugin-name-path-given-by-wordpress.org]/trunk` path.
-
-WPMVC will update Wordpress.org assets inside the `/svn/[plugin-name-path-given-by-wordpress.org]/assets` path.
-
-#### Step 5: Push and release
-
-Verify the build generate and use TortoiseSVN to add/commit your project into Wordpress.org.
-
-## License
-
-MIT License - Copyright (c) 2018 [10 Quality](https://www.10quality.com/).
+GPLv3 - Maintaned by [10 Quality Studio](https://www.10quality.com/).
