@@ -1,0 +1,44 @@
+# Copyright (C) 2019 10 Quality
+msgid ""
+msgstr ""
+"Project-Id-Version: woo-license-keys-nf\n"
+"POT-Creation-Date: 2019-12-10 01:35-0600\n"
+"PO-Revision-Date: 2019-12-10 11:26-0600\n"
+"Language-Team: 10 Quality\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.5\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: es_ES\n"
+
+msgid "Error while searching for a license key."
+msgstr "Error al buscar una clave de licencia."
+
+msgid "Type to search for a license key..."
+msgstr "Escribe para buscar una clave de licencia..."
+
+msgid "Type your license key..."
+msgstr "Escribe su clave de licencia..."
+
+msgid "Type more characters"
+msgstr "Escribe más caracteres"
+
+msgid "Type less characters"
+msgstr "Escribe menos caracteres"
+
+msgid "Error loading license keys"
+msgstr "Error al cargar las claves de licencia"
+
+msgid "Loading more license keys"
+msgstr "Cargando más claves de licencia"
+
+msgid "No license keys found in account"
+msgstr "No se encontraron claves de licencia en la cuenta"
+
+msgid "Searching..."
+msgstr "Buscando..."
+
+msgid "Details"
+msgstr "Detalles"

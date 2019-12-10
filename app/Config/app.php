@@ -59,7 +59,7 @@ return [
     'localize' => [
 
         // Enables or disables localization
-        'enabled'       => false,
+        'enabled'       => true,
         // Default path for language files
         'path'          => __DIR__ . '/../../assets/lang/',
         // Text domain
@@ -67,7 +67,7 @@ return [
         // Unload loaded locale files before localization
         'unload'        => false,
         // Flag that inidcates if this is a Wordpress.org plugin/theme
-        'is_public'     => false,
+        'is_public'     => true,
 
     ],
 

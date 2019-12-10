@@ -97,15 +97,15 @@ class NinjaFormsController extends Controller
                                 'lang'          => [
                                                     'placeholder'       => empty( $settings['placeholder'] )
                                                         ? ( is_user_logged_in()
-                                                            ? __( 'Type to search for a license key.', 'woo-license-keys-nf' )
-                                                            : __( 'Type your license key.', 'woo-license-keys-nf' )
+                                                            ? __( 'Type to search for a license key...', 'woo-license-keys-nf' )
+                                                            : __( 'Type your license key...', 'woo-license-keys-nf' )
                                                         )
                                                         : $settings['placeholder'],
                                                     'inputTooShort'     => __( 'Type more characters', 'woo-license-keys-nf' ),
                                                     'inputTooLong'      => __( 'Type less characters', 'woo-license-keys-nf' ),
                                                     'errorLoading'      => __( 'Error loading license keys', 'woo-license-keys-nf' ),
                                                     'loadingMore'       => __( 'Loading more license keys', 'woo-license-keys-nf' ),
-                                                    'noResults'         => __( 'No license keys found', 'woo-license-keys-nf' ),
+                                                    'noResults'         => __( 'No license keys found in account', 'woo-license-keys-nf' ),
                                                     'searching'         => __( 'Searching...', 'woo-license-keys-nf' ),
                                                     'maximumSelected'   => __( 'Error loading license keys', 'woo-license-keys-nf' ),
                                                 ],
