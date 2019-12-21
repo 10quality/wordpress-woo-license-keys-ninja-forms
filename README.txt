@@ -5,7 +5,7 @@ Tags: woocommerce, license keys, ninja forms
 Requires at least: 3.2
 Requires PHP: 5.4
 Tested up to: 5.3
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -71,7 +71,10 @@ Would you like to support and donate to help us maintain this plugin? [Click Her
 
 == Changelog ==
 
-No changes yet.
+= 1.0.1 =
+*Release Date - 20 Dec 2019*
+
+* Framework update.
 
 == Upgrade Notice ==
 

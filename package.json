@@ -1,6 +1,6 @@
 {
   "name": "woo-license-keys-nf",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "dependencies": {
     "gulp": "^3.9.1",
     "gulp-wpmvc": "^1.2.*"
