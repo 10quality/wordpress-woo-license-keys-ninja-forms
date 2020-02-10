@@ -1,6 +1,7 @@
 === Plugin Name ===
 License Keys (Forms integration)
 Contributors: 10quality
+Donate link: https://www.10quality.com/donations/
 Tags: woocommerce, license keys, ninja forms
 Requires at least: 3.2
 Requires PHP: 5.4
