@@ -23,6 +23,8 @@ return [
 
     'version' => '1.0.2',
 
+    'author' => '10 Quality Studio <https://www.10quality.com/>',
+
     'autoenqueue' => [
 
         // Enables or disables auto-enqueue of assets
