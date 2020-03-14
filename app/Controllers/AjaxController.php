@@ -14,7 +14,7 @@ use LicenseKeys\Models\LicenseKey;
  * @author 10Quality <info@10quality.com>
  * @license GPLv3
  * @package woo-license-keys-nf
- * @version 1.0.0
+ * @version 1.0.3
  */
 class AjaxController extends Controller
 {
@@ -31,9 +31,9 @@ class AjaxController extends Controller
         if ( is_user_logged_in() ) {
             try {
                 $request = [
-                    'code'      => sanitize_text_field( Request::input( 'code', '' ) ),
-                    'limit'     => absint( Request::input( 'limit', 10 ) ),
-                    'page'      => absint( Request::input( 'page', 1 ) ),
+                    'code'      => Request::input( 'code', '' ),
+                    'limit'     => Request::input( 'limit', 10 ),
+                    'page'      => Request::input( 'page', 1 ),
                 ];
                 $data = [];
                 if ( empty( $request['code'] ) ) {
