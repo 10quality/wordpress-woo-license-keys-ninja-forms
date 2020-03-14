@@ -21,7 +21,7 @@ return [
 
     ],
 
-    'version' => '1.0.2',
+    'version' => '1.0.3',
 
     'author' => '10 Quality Studio <https://www.10quality.com/>',
 

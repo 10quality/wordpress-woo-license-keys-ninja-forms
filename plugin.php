@@ -2,7 +2,7 @@
 /*
 Plugin Name: License Keys (Forms integration)
 Description: Ninja Forms integration with License Keys for WooCommerce.
-Version: 1.0.2
+Version: 1.0.3
 Author: 10 Quality
 Author URI: https://www.10quality.com/
 Text Domain: woo-license-keys-nf
