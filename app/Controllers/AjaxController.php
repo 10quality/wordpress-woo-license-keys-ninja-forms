@@ -37,7 +37,7 @@ class AjaxController extends Controller
                 ];
                 $data = [];
                 if ( empty( $request['code'] ) ) {
-                    $license_keys = LicenseKey::fromUser( get_current_user_id() );
+                    $license_keys = LicenseKey::from_user( get_current_user_id() );
                     for ( $i = count( $license_keys )-1; $i >= 0; --$i ) {
                         if ( $license_keys[$i]->is_valid )
                             $data[] = apply_filters( 'woocommerce_license_key', $license_keys[$i] );
