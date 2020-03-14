@@ -76,6 +76,7 @@ Would you like to support and donate to help us maintain this plugin? [Click Her
 *Release Date - 13 Mar 2019*
 
 * Framework upgrade.
+* Tested with WooCommerce 4.0.
 
 = 1.0.2 =
 *Release Date - 9 Feb 2019*
