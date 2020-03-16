@@ -73,7 +73,7 @@ Would you like to support and donate to help us maintain this plugin? [Click Her
 == Changelog ==
 
 = 1.0.3 =
-*Release Date - 14 Mar 2019*
+*Release Date - 15 Mar 2019*
 
 * License Keys for WooCommerce integration updates.
 * Framework upgrade.
