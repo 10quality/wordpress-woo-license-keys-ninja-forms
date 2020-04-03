@@ -10,7 +10,7 @@ Text Domain: woo-license-keys-nf
 Domain Path: /assets/lang/
 
 WC requires at least: 3
-WC tested up to: 4.0.0
+WC tested up to: 4.0
 
 See "LICENSE" file.
 */
